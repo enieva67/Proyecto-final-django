@@ -1,0 +1,15 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+ <form action="{% url 'encuesta' %}" method="POST" style="text-align: center;color: white; margin: 20px auto;background-color:green">
+        {% csrf_token %}
+        {{ forms_encuesta.as_div }}
+        <input type="submit" value="Enviar" style="width: 150px;">
+
+    </form>
+  </div>
+{% endblock %}
