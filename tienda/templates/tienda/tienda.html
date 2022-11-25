@@ -43,8 +43,10 @@
         </div> 
         
         <div class="card-footer text-center">
+            <div><a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carro</a> </div>
+<br>
+            <div>  <a href="{% url 'opinion' producto.id %}" class="btn btn-success" style="text-align: center;color:black; background-color: rgb(50, 250, 250)">Mostrar opinion</a>    </div>
 
-            <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carro</a>
 
         </div>
 

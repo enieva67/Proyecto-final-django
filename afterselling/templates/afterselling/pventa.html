@@ -46,8 +46,21 @@
       </div>
     </div>
   </section>
+<section class="page-section clearfix">
+    <br> <br> <br> <br> <br> <br>
+<div class="intro-text left-0 text-center bg-faded p-1 rounded" style="text-align: center; margin: 20px auto;background-color:rgb(150, 150, 250)">
 
-<div>
-<a href="{% url 'encuesta' %}" class="btn btn-success"> Realizar breve encuesta de opinion </a>
+    <h5  >
+            <span >  Tu opinion nos interesa, {{cliente}}</span>
+        <br>
+            <span >puedes realizar esta breve encuesta</span>
+        <br>
+            <span >Selecciona el producto del que quieres opinar </span>
+          </h5>
+<br> <br> <br>
+    {% for producto in names %}
+<a href="{% url 'encuesta' producto.producto_id %}" class="btn btn-success" style="background-color:rgb(50, 150, 50)"> {{ producto.nombre }} {{ producto.producto_id }}   </a>
+    {% endfor %}
 </div>
+</section>
 {% endblock %}

@@ -46,7 +46,7 @@ def procesar_pedido(request):
             pedido=pedido,
             financiacion=financiacion
             ))
-        productos.append({'nombre':value['nombre'],'cantidad':value['cantidad']})
+        productos.append({'nombre':value['nombre'],'cantidad':value['cantidad'],'producto_id':key})
     LineaPedido.objects.bulk_create(lineas_pedido) # crea registros en BBDD en paquete
 
     cliente=request.user

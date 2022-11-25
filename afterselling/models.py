@@ -64,3 +64,5 @@ class Encuesta(models.Model):
         choices=ESTUDIOS_CHOICES,
         default=SECUNDARIO_C,
     )
+    producto = models.IntegerField(default=1)
+
