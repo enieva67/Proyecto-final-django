@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
+
 
 # Create your models here.
 
@@ -20,6 +22,7 @@ class Post(models.Model):
     contenido=models.CharField(max_length=50)
     imagen=models.ImageField(upload_to="blog", null=True, blank=True)
     autor=models.ForeignKey(User, on_delete=models.CASCADE)
+    content= RichTextField(verbose_name="Contenido_de_texto",null=True)
     categorias=models.ManyToManyField(Categoria)
     created=models.DateTimeField(auto_now_add=True)
     updated=models.DateTimeField(auto_now_add=True)
@@ -31,3 +34,16 @@ class Post(models.Model):
     def __str__(self):
         return self.titulo
 
+class Comentario(models.Model):
+    content = RichTextField(verbose_name="Comentario")
+    posts_id=models.IntegerField()
+    autor=models.ForeignKey(User,on_delete=models.CASCADE)
+    created=models.DateTimeField(auto_now_add=True)
+    updated=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name='comentario'
+        verbose_name_plural='comentarios'
+
+    def __str__(self):
+        return self.content

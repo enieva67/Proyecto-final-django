@@ -40,7 +40,7 @@ class Encuesta(models.Model):
 
     resenia=models.TextField(max_length=500)
 
-    edades=models.IntegerField(max_length=3)
+    edades=models.IntegerField()
 
     PRIMARIO_I = 'PI'
     PRIMARIO_C = 'PC'

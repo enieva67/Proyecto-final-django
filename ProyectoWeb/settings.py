@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+DEFAULT_AUTO_FIELD='django.db.models.BigAutoField'
 
 # Application definition
 
@@ -48,7 +49,8 @@ INSTALLED_APPS = [
     'autenticacion',
     'crispy_forms',
     'pedidos',
-    'afterselling'
+    'afterselling',
+    'ckeditor',
     ]
 
 MIDDLEWARE = [
