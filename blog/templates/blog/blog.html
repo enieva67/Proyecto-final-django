@@ -38,11 +38,11 @@
         <br>
         {% if posts_id == post.id and mostrar == 0 %}
         {% for comentario in comentarios %}
-        <div class="card" style="width: 100%; margin: 5px 5px;text-align: center;">
+        <div class="card" style="width: 100%; margin: 1px 1px;text-align: center;">
 
      <h3 class="card-title" >{{ comentario.autor }} dice: </h3>
 
- <div class="card-body" style="text-align: center;background-color:rgb(135, 55, 0);">
+ <div class="card-body" style="text-align: center;background-color:rgb(235, 255, 235);">
 
 
             <p class="card-text" style="text-align: center;width: 100%; margin: 5px 5px;background-color:rgb(150, 250, 250);" >{{ comentario.content }}</p>

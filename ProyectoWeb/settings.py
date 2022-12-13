@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-DEFAULT_AUTO_FIELD='django.db.models.BigAutoField'
 
 # Application definition
 
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'pedidos',
     'afterselling',
+    'pages.apps.PagesConfig',
     'ckeditor',
     ]
 
@@ -144,8 +144,8 @@ EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
-EMAIL_HOST_USER="aquí la dirección del destinatario"
-EMAIL_HOST_PASSWORD="abckzymcjtsyoewx"
+EMAIL_HOST_USER="tutligth777@gmail.com"
+EMAIL_HOST_PASSWORD="clave"
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
@@ -161,6 +161,7 @@ MESSAGE_TAGS={
 
 }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 

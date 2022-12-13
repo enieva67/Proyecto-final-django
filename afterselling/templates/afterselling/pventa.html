@@ -60,7 +60,6 @@
 <br> <br> <br>
     {% for producto in names %}
 <a href="{% url 'encuesta' producto.producto_id %}" class="btn btn-success" style="background-color:rgb(50, 150, 50)"> {{ producto.nombre }} {{ producto.producto_id }}   </a>
-
     {% endfor %}
 </div>
 </section>
