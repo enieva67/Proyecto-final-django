@@ -23,7 +23,7 @@ def contacto(request):
             "",["aquí la dirección del destinatario"],reply_to=[email])
 
             try:
-                email.send()
+                #email.send()
 
                 return redirect("/contacto/?valido")
             except:

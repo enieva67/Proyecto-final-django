@@ -6,8 +6,8 @@
 <div class="container" style="text-align: center;">
 {% block content %}
 
-<div class="card" style="width: 100%; margin: 5px 5px;text-align: center;">
-     <img src="{{producto.imagen.url}}" class="card-img-top">
+<div class="card" style="margin: 5px 5px;text-align: center;width: 100%">
+     <img src="{{producto.imagen.url}}" class="card-img-top" >
      <h1 class="card-title" >{{producto.nombre}}</h1>
      {% for o in opiniones %}
  <div class="card-body" style="text-align: center;background-color:rgb(235, 255, 235);">
